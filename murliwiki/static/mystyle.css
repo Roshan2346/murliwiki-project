@@ -1,0 +1,157 @@
+    html {
+    position: relative;
+    min-height: 100%;
+    }
+    body {
+    /* Margin bottom by footer height */
+    margin-bottom: 50px;
+    background-image: url("back.png");
+    background-repeat:no-repeat;
+    }
+    .footer {
+    position: absolute;
+    bottom: 0;
+    padding-top: 15px;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 50px;
+    background-color: #353b48;
+    color: white;
+    text-align: center;
+    }
+
+    .content {
+    padding-bottom: 35px;
+    }
+    .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    text-decoration: none;
+    }
+
+
+    .searchbarform{
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 10px;
+    padding: 12px;
+    text-decoration: none;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 250px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    text-decoration: none;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    text-decoration: none;
+    }
+
+    .search_icon{
+    background-color: #ff471a;
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    }
+
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+
+    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+select option {
+    margin:40px;
+    background-color: #353b48;
+    color:#fff;
+}
+
+select:hover {
+color: #444645;
+background: #f4dad7;
+}
+
+
+#murliwiki {
+width: 500px;
+height: 210px;
+border-style:double;
+border-width: 7px;
+border-color: navy;
+background-color: lightgrey;
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+body.modal-open #wrap{
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(35px);
+    -o-filter: blur(35px);
+    -ms-filter: blur(35px);
+    filter: blur(35px);
+    
+}
+  
+.modal-backdrop {background: #f77676;}
+
+
