@@ -66,20 +66,33 @@
         </div>
       </div>
       <div class="my-3 p-3 bg-white rounded box-shadow">
-        <h6 class="border-bottom border-gray pb-2 mb-0 text-center"><strong>
-        {% if result in results.all %}
-
-        {{ result.year }}
-
-        {% endif %}
-        </strong></h6>
+        <h6 class="border-bottom border-gray pb-2 mb-0 text-center"><strong>{{ y }}</strong></h6>
 
 
-        {% for result in results.all %}
+
+        <!--If error comes then display this line-->
+        {% if error %}
+
         <div class="media text-muted pt-3 mb-2" style="background-color: #e6f2ff;">
           <img src="{% static 'arrow.png'%}" width="36" height="36" alt="" style="margin-top: 8px;" class="mr-2 rounded">
           <p class="media-body pb-3 mb-0 lh-125 border-bottom border-gray" style="text-indent: 1em; margin-top: 10px;">
-            <strong style="font-size: 16px; color: #990000;">@ {{ result.date }}</strong><span style="color: #990000">&#8287;&#8287;&#8287;&#8287;&#8287;&#8287;&#8287;&#8287;&#8287;&#8287;<strong style="font-size: 18px; font-family: 'Hind', sans-serif;">{{ result.title }}</strong></span><span style="float: right;"><a href="{{ result.file.url }}"><img src="{% static 'pdf.jpg'%}" width="36" height="44" alt="" class="mr-2 rounded"></a></span>
+
+            <span style="color: #990000"><strong style="font-size: 18px; font-family: 'Hind', sans-serif;">{{ error }}</strong></span>
+          </p>
+        </div>
+        {% endif %}
+
+
+        <!--If error not found then use for loop to iterate through list-->
+        {% for i,j in pl %}
+        <div class="media text-muted pt-3 mb-2" style="background-color: #e6f2ff;">
+          <img src="{% static 'arrow.png'%}" width="36" height="36" alt="" style="margin-top: 8px;" class="mr-2 rounded">
+          <p class="media-body pb-3 mb-0 lh-125 border-bottom border-gray" style="text-indent: 1em; margin-top: 10px;">
+
+            <span style="color: #990000"><strong style="font-size: 18px; font-family: 'Hind', sans-serif;">{{ i }}</strong></span>
+
+
+            <span style="float: right;"><a href="{{ j }}"><img src="{% static 'pdf.jpg'%}" width="36" height="44" alt="" class="mr-2 rounded"></a></span>
           </p>
         </div>
         {% endfor %}
@@ -94,7 +107,7 @@
 
     <footer class="text-muted">
   <div class="container-fluid footer">
-    <p style="font-size: 15px; font-family: 'Hind', sans-serif;">{{ month }}{{ year }}शिव भगवानुवाच :- आप चिंता क्यों करते हो मैं बैठा हूं ना ! <span style="float: right;">{% now "jS F Y" %}</span></p>
+    <p style="font-size: 15px; font-family: 'Hind', sans-serif;">शिव भगवानुवाच :- आप चिंता क्यों करते हो मैं बैठा हूं ना ! <span style="float: right;">{% now "jS F Y" %}</span></p>
   </div>
 </footer>
     <!-- Bootstrap core JavaScript
