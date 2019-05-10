@@ -51,7 +51,7 @@
 
   <body>
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-      <a class="navbar-brand" href="{% url 'home' %}"><img alt="murliwiki" class="rounded border border-info" style="width: 145px; height: 55px;" id="murliwiki" src="{% static 'murliwiki.png'%}" class="center img-fluid"></a>
+      <a class="navbar-brand" href="{% url 'home' %}"><img alt="murliwiki" class="rounded border border-info" style="width: 145px; height: 55px;" id="murliwiki" title="Murli Wiki" src="{% static 'murliwiki.png'%}" class="center img-fluid"></a>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex"></ul><a href="{% url 'home' %}">
           <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">&larr; Go Back</button>
           </a>
@@ -59,7 +59,7 @@
     <main role="main" class="container" style="padding-top: 90px;">
       <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-danger rounded box-shadow" style="padding-top: 10px; ">
         
-        <img class="mr-3" src="{% static 'point.jpg'%}" alt="bk" width="48" height="52">
+        <img class="mr-3" src="{% static 'point.jpg'%}" title="Shiv Baba" alt="bk" width="48" height="58">
         
         <div class="lh-100">
           <h6 class="mb-0 text-white lh-100"><strong>Below are the search results :-</strong></h6>
@@ -74,8 +74,7 @@
         {% if error %}
 
         <div class="media text-muted pt-3 mb-2" style="background-color: #e6f2ff;">
-          <img src="{% static 'arrow.png'%}" width="36" height="36" alt="" style="margin-top: 8px;" class="mr-2 rounded">
-          <p class="media-body pb-3 mb-0 lh-125 border-bottom border-gray" style="text-indent: 1em; margin-top: 10px;">
+          <p class="media-body pb-3 mb-0 lh-125 border-bottom border-gray" style="text-indent: 1em; margin-top: 10px; text-align: center;">
 
             <span style="color: #990000"><strong style="font-size: 18px; font-family: 'Hind', sans-serif;">{{ error }}</strong></span>
           </p>

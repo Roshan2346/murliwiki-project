@@ -65,11 +65,11 @@ height: auto;
     <div class="container h-100 content" id="main">
       <main role="main">
         
-      <div style="height:150px;margin-top:50px; margin-bottom: 100px;"><img alt="murliwiki" id="murliwiki" src="{% static 'murliwiki.png'%}" class="center img-fluid shadow-lg">
+      <div style="height:150px;margin-top:50px; margin-bottom: 100px;"><img alt="murliwiki" id="murliwiki" src="{% static 'murliwiki.png'%}" title="Murli Wiki" class="center img-fluid shadow-lg">
       </div>
       <div class="d-flex justify-content-center h-10">
           <div class="searchbar">
-            <button class="search_icon" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></button>
+            <button class="search_icon" title="About this Website" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></button>
     </div>
     <div class="searchbarform" style="width:auto;">
       <form method="POST" action="{% url 'results' %}">
@@ -144,7 +144,7 @@ height: auto;
       </div>
     </div>
       <div class="searchbar">
-          <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
+          <button type="submit" title="Search" class="search_icon"><i class="fas fa-search"></i></button>
         </div>
       </div>
       </form>
