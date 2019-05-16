@@ -12,6 +12,11 @@
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" type="text/css" href="{% static 'mystyle.css'%}">
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="{% static 'alert.css'%}">
+
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -69,7 +74,8 @@ height: auto;
       </div>
       <div class="d-flex justify-content-center h-10">
           <div class="searchbar">
-            <button class="search_icon" title="About this Website" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></button>
+            <button id="myBtn" onclick="function()" class="search_icon" title="About this Website"><i class="glyphicon glyphicon-question-sign"></i></button>
+           
     </div>
     <div class="searchbarform" style="width:auto;">
       <form method="POST" action="{% url 'results' %}">
@@ -150,39 +156,34 @@ height: auto;
       </form>
       </main>
         </div>
-        <div style="height: 50px;">
-        	
+        <div style="height: 180px; width: 280px;" class="center">
+        <div class="parent" style="height: 40px; width: auto;">
+          
         </div>
+      </div>
+      <div style="height: 50px; width: auto;">
+      </div>
           <footer class="text-muted">
-  <div class="container-fluid footer">
+  <div class="container-fluid footer" style="height: 60px; padding-top: 20px;">
     <h4 style="font-family: 'Hind', sans-serif;">शिव भगवानुवाच :- आप चिंता क्यों करते हो मैं बैठा हूं ना ! <span style="float: right;">{% now "jS F Y" %}</span></h4>
     
   </div>
 </footer>
-    
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+    $('#myBtn').click(function () {
+
+      $('.parent').empty();
+      
+            $('.parent').append("<div class='alert alert-info alert-dismissable' style='width:300px;'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><h2 style='color:#000099; font-size: 18px;'>About Murli Wiki!</h2><br><p style='color:#000099; font-size: 12px;'>Select Month and Year then click on the Search button to get the list of all Avyakt Murlis in that respective period.<br><br><strong>Note: </strong>This website is meant for educational purpose only.</p></div>")
 
 
 
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog" style="top: 70px; background-color: #0000b3; opacity: 0.8;">
-        <!-- Modal content-->
-        <div class="modal-content bg-transparent border-0">
-            <div class="modal-header">
-                <h3 style="color:white;"class="modal-title">About Murli Wiki!</h4>
-                <button type="button" class="close" style="color: white;" data-dismiss="modal">×</button>
-            </div>
-            <div class="modal-body">
-                <p style="color:white;">Select the Month or Year, or both and then click on the Search button to get the list of all Avyakt Murlis in that respective period. <br><br><strong>Note: </strong>This website is meant for educational purpose only.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
+    })
 
-  </div>
-</div>
-
-
+});
+</script>
 </body>
 </html>
