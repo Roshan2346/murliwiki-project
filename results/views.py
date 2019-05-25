@@ -26,7 +26,7 @@ def allresults(request):
             pdf_url[dt] = u
 
     if (len(pdf_url) == 0):
-        return render(request, 'results/allresults.html', {'y': yea, 'error': 'No Murlis found for this period of time. Try changing the month...'})
+        return render(request, 'results/allresults.html', {'y': yea, 'm': mon, 'error': 'No Murlis found for this period of time. Try changing the month...'})
     else:
         pl = pdf_url.items()
         return render(request, 'results/allresults.html', {'y': yea, 'pl': pl})

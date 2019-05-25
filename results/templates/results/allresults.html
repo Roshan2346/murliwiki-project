@@ -66,9 +66,12 @@
         </div>
       </div>
       <div class="my-3 p-3 bg-white rounded box-shadow">
-      <!--<h6 class="border-bottom border-gray pb-2 mb-0 text-center"><strong>{{ y }}</strong></h6>-->
+        {% if error %}
+      <h6 class="border-bottom border-gray pb-2 mb-0 text-center"><strong>{{ m }} of {{ y }}</strong></h6>
+      {% else %}
       <h4 class="border-bottom border-gray pb-2 mb-0 text-center" style="font-family: 'Hind', sans-serif; font-size: 15px; color: #990000;"><strong>अव्यक्त शिव बाबा और ब्रह्मा बाबा ने ब्रह्माकुमारी हृदय मोहिनी जी के माध्यम से ब्रह्मा-वत्सों के सम्मुख जो कल्याणकारी महावाक्य उच्चारण किए, यहां उनका संकलन है</strong>
 </h4>
+{% endif %}
 
 
 
